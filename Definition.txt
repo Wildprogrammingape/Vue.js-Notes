@@ -1,0 +1,6 @@
+Vue是一个framework, 用来创建SPA或者小部件widget, 比如signup form的vue component,该部件可以用于不同browser
+
+
+React处理跳转： server发送一个初始html，跳转页面时候react router来处理
+
+Vue处理跳转： server发送一个bare-bone HTML，没有内容，然后Vue javascript bundle来添加所需的component内容到页面，如 Nav bar, article。 同理，vue也和react一样处理跳转页面，不需要重新发送http request到server来获取html页面

@@ -1,0 +1,5 @@
+v-if 和 v-show的区别在于，
+
+v-if是根据condition来判断element的存在，如果是false则remote该element from DOM
+
+v-show 是操作CSS，false则是 style="display:none"，该element始终存在
