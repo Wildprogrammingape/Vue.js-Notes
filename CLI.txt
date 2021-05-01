@@ -1,0 +1,12 @@
+CLI是 command line interface 用于配置整个app
+
+好处： 可以使用modern JS feature, 提供live-reload dev server，优化了代码用于production
+
+下载cli包： npm install -g @vue/cli
+创建project :  vue create XXX
+打开VS code：  code .       在vs code中打开当前目录
+
+
+当使用别人的代码时，需要下载dependency，通过：
+
+npm install   ---   下载对应project的package.json的所有依赖
