@@ -1,0 +1,3 @@
+初始的vue project会自动生成App.vue 作为 root component，
+
+其他的component会nest到下面， 如 Header.vue,  Artivle.vue, Footer.vue
