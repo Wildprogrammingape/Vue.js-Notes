@@ -1,0 +1,17 @@
+用于在js代码中获取element
+
+例子：
+
+<template>
+  <button @click="handleClick" ref="name">Click me</button>
+</template>
+
+methods: {
+    handleClick(){
+      console.log(this.$refs.name)
+    }
+}
+
+>>输出：
+
+<button>Click me</button>
