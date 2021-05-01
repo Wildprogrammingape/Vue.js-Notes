@@ -1,0 +1,8 @@
+1.   v-for="book in books"   用于遍历数组的每个元素
+1.   v-if="boolean"   用于conditional 显示template
+1.   v-else="boolean"   用于剩余情况
+1.   @click="methodName($event, param)"   用于添加click event, event 对象同样可作为参数传入 param是自定义参数
+1.   @mouseover="methodName"   用于鼠标进入event
+1.   @mouseleave="methodName"   用于鼠标离开event
+1.   @dblclick="methodName"   用于双击event
+1.   :arrtibute=""   用于attribute是dynamic的情况，可变
