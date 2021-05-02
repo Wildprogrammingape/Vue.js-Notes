@@ -1,0 +1,16 @@
+slot用于在App.vue中写component.vue的内容，
+
+如：
+
+App.vue:
+
+<Modal  @close="toggleModal" >
+      <h1>Hello slot</h1>
+</Modal>
+
+
+Modal.vue:
+
+<div class="modal">
+       <slot></slot>   这里slot的内容就是在App.vue中<Modal>之间的内容
+</div>
