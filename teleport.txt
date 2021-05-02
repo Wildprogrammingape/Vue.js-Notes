@@ -1,0 +1,17 @@
+teleport用于在index.html中不用默认的app div， 而另写一个新的div，此时只需将component的tag用teleport wrap起来即可
+
+
+例子：
+
+index.html:
+
+<div id="modal"></div>
+
+
+App.vue:
+
+<teleport to="modal">
+
+ ...
+
+<teleport>
