@@ -5,4 +5,5 @@
 1.   @mouseover="methodName"   用于鼠标进入event
 1.   @mouseleave="methodName"   用于鼠标离开event
 1.   @dblclick="methodName"   用于双击event
-1.   :arrtibute=""   用于attribute是dynamic的情况，可变
+1.   :arrtibute=""   用于attribute是dynamic的情况，括号里是variable，可变  （data binding,变量在script里定义）
+1.   :class="{classValue, boolean}"   用于conditional 赋值class value
