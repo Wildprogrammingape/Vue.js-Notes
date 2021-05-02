@@ -1,0 +1,26 @@
+1. $emit event用于在A.vue中调用B.vue的method
+
+例子:  
+A.vue中:
+
+<div class="backdrop" @click="closeModal">
+
+methods: {
+        closeModal(){
+            this.$emit('close')
+        }
+}
+
+B.vue中:
+
+<Modal @close="toggleModal" />
+
+toggleModal(){
+      this.showModal = !this.showModal
+}
+
+2. @click event 用于用户click
+
+@click.shit -- 按下shift键
+@click.right -- 右键单击
+@click.self -- 限制单击当前class, 而不计入child class element
