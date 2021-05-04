@@ -1,4 +1,8 @@
-1. $emit event用于在A.vue中调用B.vue的method
+1. $emit event用于在A.vue中调用B.vue的method (parent.vue调用child.vue的数据) emit是发射的意思
+
+语法：
+
+$this.emit('name', data)  其中data是想传递的数据，name是该emit event的名字用于parent component中
 
 例子:  
 A.vue中:
