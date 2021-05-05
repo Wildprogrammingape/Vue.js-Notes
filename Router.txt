@@ -1,0 +1,1 @@
+Vue Router用于跳转页面，不同的页面用<router-link>写，不需要发送请求到server，router只需render不同的component即可
