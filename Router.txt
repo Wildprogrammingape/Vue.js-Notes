@@ -1,1 +1,53 @@
 Vue Router用于跳转页面，不同的页面用<router-link>写，不需要发送请求到server，router只需render不同的component即可
+
+所有能看到的页面，如Home.vue, Contact.vue都放在view的文件夹下，
+
+想添加新的页面，在router文件夹下的index.js添加新的route
+
+
+例子：
+
+1) router-index.js中：
+
+const routes = [
+   {
+    path: '/posts/:id',
+    name: 'Details',
+    component: Details,
+    props: true
+   }
+]
+
+这里的:id就是用户输入的endpoint id，和
+
+
+2) 含有跳转链接的component， SinglePost.vue中：
+
+<router-link :to="{name: 'Details', params: {id: post.id}}">
+
+router-link替代传统<a> tag，name就是index.js中的名字，params可以添加一些参数如id，值为post.id，用于getPost.js获取某个Id的博客数据, 这个id传递链为：  index.js的path中 -- 含有跳转链接的component.vue的params中 -- 最终跳转的页面的props里
+
+
+3) 跳转页面views-Details.vue中：
+
+<template>
+  <div>{{post}}</div>
+</template>
+
+<script>
+export default {
+    props: ['id'],
+    setup(props){
+        const {post, error, load} = getPost(props.id)
+        load()
+    }
+}
+</script>
+
+获得这个id要用props.id，由于getPost返回的是Object {post, error, load} 所以用destructure分别获取...
+
+
+
+
+
+
