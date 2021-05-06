@@ -1,0 +1,18 @@
+1. mouted()  component mount到DOM时执行
+2. updated()  数据改变时执行
+3. unmouted() 该component 不再mount 到DOM时执行
+
+
+
+常见生命周期函数 (hook名字是property, 函数为value) ：
+
+beforeCreated: function(){}	在vue instance variable实例化之后，数据观测 data observer和event之前调用 (页面产生前)
+
+created: function(){}		在实例创建完成后调用
+
+mouted: function(){}		component 渲染到DOM之后
+
+beforeUpdate: function(){}	数据更新前调用
+
+update: function(){}  		数据更新后，DOM更新后
+
