@@ -1,0 +1,9 @@
+composition API有一个setup function，所有的 data methods computed lifecycle hooks都放在里面,
+
+该setup hooks在所有函数之前运行
+
+与常规的Options API(数据放在data computed 和 mouted里) 相比， composition API更容易构造 resuable functions
+
+主要特点：
+
+在 setup 中用ref对象定义可变的variable，然后要return出来。而在常规option api中data本身就是可变的
