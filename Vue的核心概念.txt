@@ -1,0 +1,13 @@
+vue的核心在于data和DOM是linked连接的，用模板语法来将数据渲染进DOM
+
+
+比如，我们想将vue app渲染到 <div id="app"></div>，需要：
+
+
+const RootComponent = { //创建root component
+  
+}
+
+const app = Vue.createApp(RootComponent)  // 创建vue app
+
+const vm = app.mount('#app')  //将app渲染到DOM
