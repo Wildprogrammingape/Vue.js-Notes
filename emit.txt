@@ -1,0 +1,41 @@
+变量在父组件中，触发事件在子组件中
+
+子组件通过$emit告诉父组件某个event发生，触发父组件的method改变父组件的variable
+
+
+例子：
+
+子组件中：
+
+<button @click="addToCart" Add to Cart</button>  子组件的按钮click后触发子组件的$emit method
+
+methods: {
+        addToCart(){
+            this.$emit('add-to-cart');          通过emit将子组件中的click event发射出去
+}
+
+父组件中：
+
+<product-display @add-to-cart="updateCart"></product-display>  这里的attribute名字就是emit的名字，触发父组件的method
+
+data(){
+        return {
+            cart: 0,                             变量是写在父组件里的
+        }
+},
+
+methods: {
+        updateCart(){		触发父组件的method，让cart加一
+            this.cart += 1;                      
+        },
+}
+
+<div>{{cart}}</div>    这样一来，子组件的button click event触发，emit发射到父组件的attribute中，触发父组件method，让父组件的变量改变
+
+
+另外，$emit()的第二个参数可以传递id，这样子组件的id变量即可传递到父组件中
+
+
+
+
+
