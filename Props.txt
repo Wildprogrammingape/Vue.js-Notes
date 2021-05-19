@@ -1,0 +1,26 @@
+子组件可以使用 props 接收父组件的数据
+
+例子：
+
+main.js中
+
+data(){
+        return {
+            // premium变量在main.js全局中定义，而ProductDisplay Component需要用，
+            // 因此需要props将parent的变量传递到child中
+            premium: false,
+        }
+    },
+
+
+ProductDisplay中：
+
+props:{
+        premium:{type: Boolean, required: true}
+}
+
+或者
+
+props:['premium']
+
+这样main.js的premuin变量通过props传递过来，用this.premium即可使用
