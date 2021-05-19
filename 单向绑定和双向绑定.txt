@@ -1,0 +1,2 @@
+1. v-bind是one-way-binding，从data到template，data变template就变
+2. v-model是two-way-binding，template的input和data相互绑定
