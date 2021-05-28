@@ -1,0 +1,21 @@
+1.
+
+<select v-model.number="rating">
+        <option>5</option>
+        <option>4</option>
+        <option>3</option>
+        <option>2</option>
+        <option>1</option>
+    </select>
+
+v-model.number的意思为typecast the value as a number 将变量的值变为number
+
+2.
+
+<form class="review-form" @submit.prevent="">
+
+</form>
+
+@submit.prevent用来阻止浏览器刷新
+
+
