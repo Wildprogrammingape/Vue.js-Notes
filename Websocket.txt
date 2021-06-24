@@ -1,0 +1,7 @@
+Websocket 是建立在 HTTP protocol的协议，用来实时传输数据 exchange data in real time 
+
+由于HTTP的需要request和response来进行，需要 three-way handshake，每次数据传输都是单向的
+
+而websocket可以让数据real time传输，client可以传数据给server，同时server也可传数据给client
+
+因此对于数据实时传输的场景，如 chatting application，让数据双向传输，websocket 是对HTTP protocol的优化
